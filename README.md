@@ -1,6 +1,4 @@
-# employee-tracker
-
-# Note Taker Application
+# Employee Tracker
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555)](https://www.linkedin.com/in/maranda-zwieschowski/)
@@ -88,5 +86,4 @@ Project Link: [https://github.com/marandaz/employee-tracker](https://github.com/
 
 ## Acknowledgements
 
-* **My Instructor** Shout out to my Bootcamp instructor, John Young, for helping pave the path to a brighter future.  
-* [Shields](https://shields.io/)
+* **My Instructor** Shout out to my Bootcamp instructor, John Young, for helping pave the path to a brighter future. 
