@@ -3,7 +3,7 @@ CREATE DATABASE employeeDB;
 
 USE employeeDB;
 
-CREATE TABLE employee (
+CREATE TABLE emp (
   id INT AUTO_INCREMENT NOT NULL,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
@@ -20,7 +20,7 @@ CREATE TABLE dept (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE emp_role (
+CREATE TABLE role (
   id INT AUTO_INCREMENT NOT NULL,
   title VARCHAR(50),
   salary DECIMAL,
