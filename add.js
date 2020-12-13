@@ -14,3 +14,25 @@ addPrompt = () => {
         if (answer.choice === 'Employees') return addEmpPrompt();
       })
   }
+
+// If the user picks DEPARTMENTS //
+
+addDeptPrompt = () => {
+    inquirer
+      .prompt([
+        {
+          type: 'input',
+          name: 'dept',
+          message: 'What is the dept you want to add?',
+        }
+      ])
+      .then(answer => {
+        addDept(answer.dept);
+      })
+  }
+
+// If the user picks ROLES //
+
+
+
+// If the user picks EMPLOYEES //
