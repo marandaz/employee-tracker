@@ -14,3 +14,13 @@ viewPrompt = () => {
         if (answer.choice === 'Employees') return viewEmpPrompt();
       })
   }
+
+// If the user picks VIEW DEPARTMENTS //
+
+
+
+// If the user picks VIEW ROLES //
+
+
+
+// If the user picks VIEW EMPLOYEES //

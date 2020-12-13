@@ -15,7 +15,7 @@ addPrompt = () => {
       })
   }
 
-// If the user picks DEPARTMENTS //
+// If the user picks ADD DEPARTMENTS //
 
 addDeptPrompt = () => {
     inquirer

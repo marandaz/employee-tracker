@@ -13,3 +13,11 @@ updatePrompt = () => {
         if (answer.choice === 'Employee Role') return updateRolePrompt();
       })
   }
+
+  // If the user picks UPDATE MANAGER ROLE //
+
+
+
+// If the user picks EMPLOEE ROLES //
+
+
