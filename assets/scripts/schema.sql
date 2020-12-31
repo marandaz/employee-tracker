@@ -3,7 +3,7 @@ CREATE DATABASE employeeDB;
 
 USE employeeDB;
 
-CREATE TABLE emp (
+CREATE TABLE employee (
   id INT AUTO_INCREMENT NOT NULL,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
@@ -14,7 +14,7 @@ CREATE TABLE emp (
   FOREIGN KEY(manager_id) REFERENCES employee(id)
 );
 
-CREATE TABLE dept (
+CREATE TABLE department (
   id INT AUTO_INCREMENT NOT NULL,
   dept_name VARCHAR(50),
   PRIMARY KEY(id)

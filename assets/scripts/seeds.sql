@@ -1,13 +1,12 @@
 USE employeeDB;
 
-
-INSERT INTO emp (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Jane", "Doe", 1, 1), ("Bart", "Simpson", 5, 2);
 
-INSERT INTO emp (first_name, last_name, role_id)
+INSERT INTO employee (first_name, last_name, role_id)
 VALUES ("John", "Smith", 2), ("Bob", "Barker", 3), ("Sally", "McChicken", 4);
 
-INSERT INTO dept (name)
+INSERT INTO department (name)
 VALUES ('Creative'), ('Marketing'), ('Frontend'), ('Backend'), ('Data Science');
 
 INSERT INTO role (title, salary, department_id)

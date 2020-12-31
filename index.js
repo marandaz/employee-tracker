@@ -30,9 +30,78 @@ init = () => {
         } 
       })
   }
+//-----//  //-----//  //-----//  //-----//  //-----//
+////   SECTION FOR ADDING (addPrompt)   ////  
+addPrompt = () => {
+  inquirer
+      .prompt([
+          {
+              type: 'list',
+              name: 'choice',
+              message: 'What would you like to add?',
+              choices: ['Departments', 'Roles', 'Employees']
+          }
+      ])
+      .then(answer => {
+          if (answer.choice === 'Departments') return addDeptPrompt();
+          if (answer.choice === 'Roles') return addRolePrompt();
+          if (answer.choice === 'Employees') return addEmpPrompt();
+      })
+}
 
-//   SECTION FOR ADDING (addPrompt)
 
+////   ADDING DEPARTMENT: PROMPT AND DB   //// 
+
+addDeptartmentPrompt = () => {
+  inquirer
+      .prompt([
+          {
+              type: 'input',
+              name: 'dept',
+              message: 'What is the dept you want to add?',
+          }
+      ])
+      .then(answer => {
+          addDept(answer.dept);
+      })
+}
+addDepartment = (department) => {
+  db.query(
+      'INSERT INTO department (name) VALUES (?)',
+      `${department}`,
+      (err, res) => {
+          if (err) throw err;
+          console.log(`${department} was added.`)
+          init();
+      }
+  )
+}
+
+
+////   ADDING ROLES   //// 
+
+
+
+
+
+////   ADDING EMPLOYEES   //// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----//  //-----//  //-----//  //-----//  //-----//
 
 //   SECTION FOR VIEWING (viewPrompt)
 

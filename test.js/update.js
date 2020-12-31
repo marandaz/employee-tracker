@@ -14,7 +14,7 @@ updatePrompt = () => {
       })
   }
 
-  // If the user picks UPDATE MANAGER ROLE //
+// If the user picks UPDATE MANAGER ROLE //
 
 
 
