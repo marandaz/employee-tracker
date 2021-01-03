@@ -23,7 +23,7 @@ init = () => {
   inquirer
     .prompt({
           type: 'list',
-          name: 'choice',
+          name: 'userSelect',
           message: 'What would you like to do?',
 
           choices: [
@@ -45,7 +45,7 @@ init = () => {
 // based on user selection, next steps proceding. The switch statements are an "if this then that"-kind of code block. https://www.w3schools.com/js/js_switch.asp  
 
         .then((answer) => {
-          switch (answer.choice) {
+          switch (answer.userSelect) {
 
             case "Add Employee":
               addEmployee();
