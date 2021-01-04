@@ -5,13 +5,11 @@ USE employeeDB;
 
 CREATE TABLE employee (
   id INT AUTO_INCREMENT NOT NULL,
-  first_name VARCHAR(50),
-  last_name VARCHAR(50),
-  role_id INT NOT NULL,
-  manager_id INT default NULL,
-  PRIMARY KEY(id),
-  FOREIGN KEY(role_id) REFERENCES role(id),
-  FOREIGN KEY(manager_id) REFERENCES employee(id)
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  roles_id INT NOT NULL,
+  manager_id INT NOT NULL,
+  PRIMARY KEY(id)
 );
 
 CREATE TABLE department (
@@ -20,11 +18,10 @@ CREATE TABLE department (
   PRIMARY KEY(id)
 );
 
-CREATE TABLE role (
-  id INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE roles (
+  id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(50),
   salary DECIMAL,
   department_id INT NOT NULL,
-  PRIMARY KEY(id),
-  FOREIGN KEY(department_id) REFERENCES department(id)
+  PRIMARY KEY(id)
 );

@@ -1,15 +1,15 @@
 // packages required for this to run, and do so securely
 var inquirer = require("inquirer");
 var mysql = require("mysql");
-const consoleTable = require("console.table");
+require("console.table");
 require("dotenv").config();
 
 // setting up DB connection
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
-  user: "marandaz",
-  password: "",
+  user: "root",
+  password: process.env.DB_PASSWORD,
   database: "employeeDB",
 });
 
@@ -131,8 +131,10 @@ function addDepartment() {
           department: answer.departmentManager,
         },
         function (err) {
-          if (err) throw err;
+          // if (err) throw err;
+          console.log("- - - - - - - - - -");
           console.log("Department created.");
+          console.log("- - - - - - - - - -");
 
           userSelection();
         }
@@ -166,9 +168,10 @@ function addRole() {
           department_id: answer.departmentId,
         },
         function (err) {
-          if (err) throw err;
+          // if (err) throw err;
+          console.log("- - - - - - - - - -");
           console.log("Role has been created!");
-
+          console.log("- - - - - - - - - -");
           userSelection();
         }
       );
@@ -225,7 +228,9 @@ function addEmployee() {
         },
         function (err) {
           // if (err) throw err;
+          console.log("- - - - - - - - - -");
           console.log("Employee has been added!");
+          console.log("- - - - - - - - - -");
 
           userSelection();
         }
@@ -244,7 +249,7 @@ function addEmployee() {
 
 function viewEmployee() {
   connection.query("SELECT * FROM employee", function (err, results) {
-    if (err) throw err;
+    // if (err) throw err;
     console.table(results);
     userSelection();
   });
@@ -252,7 +257,7 @@ function viewEmployee() {
 
 function viewRole() {
   connection.query("SELECT * FROM role", function (err, results) {
-    if (err) throw err;
+    // if (err) throw err;
     console.table(results);
     userSelection();
   });
@@ -260,7 +265,7 @@ function viewRole() {
 
 function viewDepartment() {
   connection.query("SELECT * FROM department", function (err, results) {
-    if (err) throw err;
+    // if (err) throw err;
     console.table(results);
     userSelection();
   });
@@ -275,9 +280,9 @@ function viewDepartment() {
 //-----//  //-----//  //-----//  //-----//  //-----//
 function updateEmployee() {
   connection.query("SELECT * FROM employee", function (err, employee) {
-    if (err) throw err;
+    // if (err) throw err;
     connection.query("SELECT * FROM role", function (err, role) {
-      if (err) throw err;
+      // if (err) throw err;
       const employeeOptions = employee.map((emp) => ({
         name: employee.full_name,
         value: employee,
@@ -306,8 +311,10 @@ function updateEmployee() {
             "UPDATE employee SET role_id = ? WHERE id = ?",
             [answer.updateRole.id, answer.updateEmployee.id],
             function (err) {
-              if (err) throw err;
+              // if (err) throw err;
+              console.log("- - - - - - - - - -");
               console.log("Employee updated.");
+              console.log("- - - - - - - - - -");
               userSelection();
             }
           );
