@@ -127,11 +127,10 @@ function addDepartment() {
       connection.query(
         "INSERT INTO department SET ?",
         {
-          department: answer.addDepartment,
-          department: answer.departmentManager,
+          department_name: answer.addDepartment,
         },
         function (err) {
-          // if (err) throw err;
+          if (err) throw err;
           console.log("- - - - - - - - - -");
           console.log("Department created.");
           console.log("- - - - - - - - - -");
@@ -141,7 +140,6 @@ function addDepartment() {
       );
     });
 }
-
 
 //-----//  //-----//  //-----//  //-----//  //-----//
              ////   ADDING ROLES   //// 
@@ -162,13 +160,13 @@ function addRole() {
     ])
     .then(function (answer) {
       connection.query(
-        "INSERT INTO role SET ?",
+        "INSERT INTO roles SET ?",
         {
           role: answer.addRole,
           department_id: answer.departmentId,
         },
         function (err) {
-          // if (err) throw err;
+          if (err) throw err;
           console.log("- - - - - - - - - -");
           console.log("Role has been created!");
           console.log("- - - - - - - - - -");
@@ -190,7 +188,7 @@ function addEmployee() {
       {
         name: "addEmployeeFirstName",
         type: "input",
-        message: "What is thefirst name of the employee would you like to add?",
+        message: "What is the first name of the employee would you like to add?",
       },
       {
         name: "addEmployeeLastName",
@@ -221,13 +219,13 @@ function addEmployee() {
       connection.query(
         "INSERT INTO employee SET ?",
         {
-          first_name: answer.addEmployee,
-          last_name: answer.addEmployee,
+          first_name: answer.addEmployeeFirstName,
+          last_name: answer.addEmployeeLastName,
           role_id: answer.roleId,
           manager_id: answer.employeeManagerID,
         },
         function (err) {
-          // if (err) throw err;
+          if (err) throw err;
           console.log("- - - - - - - - - -");
           console.log("Employee has been added!");
           console.log("- - - - - - - - - -");
@@ -249,15 +247,15 @@ function addEmployee() {
 
 function viewEmployee() {
   connection.query("SELECT * FROM employee", function (err, results) {
-    // if (err) throw err;
+    if (err) throw err;
     console.table(results);
     userSelection();
   });
 }
 
 function viewRole() {
-  connection.query("SELECT * FROM role", function (err, results) {
-    // if (err) throw err;
+  connection.query("SELECT * FROM roles", function (err, results) {
+    if (err) throw err;
     console.table(results);
     userSelection();
   });
@@ -265,7 +263,7 @@ function viewRole() {
 
 function viewDepartment() {
   connection.query("SELECT * FROM department", function (err, results) {
-    // if (err) throw err;
+    if (err) throw err;
     console.table(results);
     userSelection();
   });
@@ -280,10 +278,10 @@ function viewDepartment() {
 //-----//  //-----//  //-----//  //-----//  //-----//
 function updateEmployee() {
   connection.query("SELECT * FROM employee", function (err, employee) {
-    // if (err) throw err;
-    connection.query("SELECT * FROM role", function (err, role) {
-      // if (err) throw err;
-      const employeeOptions = employee.map((emp) => ({
+    if (err) throw err;
+    connection.query("SELECT * FROM roles", function (err, role) {
+      if (err) throw err;
+      const employeeOptions = employee.map((emploee) => ({
         name: employee.full_name,
         value: employee,
       }));
@@ -311,7 +309,7 @@ function updateEmployee() {
             "UPDATE employee SET role_id = ? WHERE id = ?",
             [answer.updateRole.id, answer.updateEmployee.id],
             function (err) {
-              // if (err) throw err;
+              if (err) throw err;
               console.log("- - - - - - - - - -");
               console.log("Employee updated.");
               console.log("- - - - - - - - - -");

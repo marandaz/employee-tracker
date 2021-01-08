@@ -1,9 +1,9 @@
 USE employeeDB;
 
-INSERT INTO employee (first_name, last_name, roles_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Jane", "Doe", 1, 1), ("Bart", "Simpson", 5, 2);
 
-INSERT INTO employee (first_name, last_name, roles_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("John", "Smith", 2, 2), ("Bob", "Barker", 3, 2), ("Sally", "McChicken", 4, 1);
 
 INSERT INTO department (department_name)
