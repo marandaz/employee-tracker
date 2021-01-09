@@ -59,8 +59,9 @@ npm install
 
 ## Usage
 
- To use this, you will need to use node.js, inquirer and mySQP. Once running, you are able to view, add, remove and update users within the database. 
+ To use this, you will need to use node.js, inquirer and mySQL. Once running, you are able to view, add, remove and update users within the database. 
 
+[![Example README using this app](./assets/readme.png)](https://youtu.be/CF7363VYIIY)
 
 
 ## Contributing
