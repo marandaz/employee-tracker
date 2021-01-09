@@ -61,6 +61,9 @@ npm install
 
  To use this, you will need to use node.js, inquirer and mySQL. Once running, you are able to view, add, remove and update users within the database. 
 
+<br>
+<strong>CLICK IMAGE TO VIEW VIDEO</strong>
+<br>
 [![Example README using this app](./assets/readme.png)](https://youtu.be/CF7363VYIIY)
 
 
