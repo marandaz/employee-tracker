@@ -64,7 +64,8 @@ npm install
 <br>
 <strong>CLICK IMAGE TO VIEW VIDEO</strong>
 <br>
-[![Example README using this app](./assets/readme.png)](https://youtu.be/CF7363VYIIY)
+
+[![Example README using this app] (./assets/readme.png)](https://youtu.be/CF7363VYIIY)
 
 
 ## Contributing
