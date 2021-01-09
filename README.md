@@ -35,7 +35,7 @@
 
 
 ## About The Project
-![Employee Tracker Gif](/public/assets/images/employee-tracker.gif) 
+<img src="./assets/readme.png" alt="screenshot of terminal" >
 
 
 This command-line application uses node, inquierer and MySQL to manage a comanpy's employees. It allows a user to:
@@ -65,7 +65,7 @@ npm install
 <strong>CLICK IMAGE TO VIEW VIDEO</strong>
 <br>
 
-[![Example README using this app] (./assets/readme.png)](https://youtu.be/CF7363VYIIY)
+[![Example using this app] (/readme.png)](https://youtu.be/CF7363VYIIY)
 
 
 ## Contributing
